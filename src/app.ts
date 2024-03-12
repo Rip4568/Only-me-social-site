@@ -2,6 +2,8 @@ import express, { Request, Response } from 'express';
 import { userRouter } from './routes/user-router';
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 const port = 3000;
 
 app.get('/', (request: Request, response: Response): Response => {
