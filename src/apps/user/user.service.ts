@@ -4,7 +4,7 @@ import { HttpMethod, requestMethodAccept } from "../../middlewares/requestMethod
 export function userFindManyService(request: Request, response: Response, next: NextFunction) {
     try {
         requestMethodAccept(HttpMethod.GET)(request, response, next);
-        return response.json({"message": "get one user from service", "method":request.method})
+        return response.json({"message": "get many users from service", "method":request.method})
     } catch (error) {
         return response.json({error})
     }
