@@ -15,12 +15,14 @@ datasource db {
 
 model User {
   id       Int     @id() @default(autoincrement())
-  username String  @db.VarChar(128)
-  email    String  @db.VarChar(128)
+  username String  @db.VarChar(128) @unique 
+  email    String  @db.VarChar(128) @unique
   password String  @db.VarChar(255)
   name     String? @db.VarChar(255)
+  is_root  Boolean @default(false)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
   @@map("users")
 }

@@ -16,10 +16,7 @@ export function requestMethodAccept(method: HttpMethod) {
     if (request.method === method) {
       next();
     } else {
-      response.status(405).json({
-        error: "method not allowed",
-        message: "you can only use this method: " + method
-      });
+      return response.status(405).json({ error: "Method not allowed" });
     }
   };
 }

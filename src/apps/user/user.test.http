@@ -1,0 +1,36 @@
+#Pega todos os usuarios
+GET http://localhost:3000/user HTTP/1.1
+
+###
+
+#Pega um usuario
+GET http://localhost:3000/user/14 HTTP/1.1
+
+###
+
+#cria um usuaro
+POST http://localhost:3000/user HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "user1@email.com",
+    "password": "user1",
+    "username": "user"
+    
+}
+
+###
+
+#atualiza um usuario
+PUT http://localhost:3000/user/id HTTP/1.1
+Content-Type: application/json
+
+{
+    
+}
+
+###
+
+DELETE http://localhost:3000/user/14 HTTP/1.1
+
+###
